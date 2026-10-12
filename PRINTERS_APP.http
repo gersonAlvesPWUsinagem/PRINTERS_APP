@@ -1,0 +1,15 @@
+@PRINTERS_APP_HostAddress = http://localhost:5075
+
+POST {{PRINTERS_APP_HostAddress}}/api/Auth
+Content-Type: application/json
+
+{
+	"username": "usuario",
+	"password": "senha",
+	"platform": "WEB"
+}
+
+###
+
+GET {{PRINTERS_APP_HostAddress}}/api/Auth/get-permission-user?module=1&permission=1
+Authorization: Bearer COLE_O_TOKEN_AQUI
